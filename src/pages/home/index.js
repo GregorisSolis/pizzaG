@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import api from '../../services/api'
 
 class SignUp extends Component {
-    state ={
+    state = {
         productos: [],
         name_user: "user undefined"
     }
@@ -24,18 +24,29 @@ class SignUp extends Component {
 
         api.get('/productos/todos')
         .then(res => {
-            this.setState({ productos: res.data });
-            console.log(res.data)
+            this.setState({ productos: res.data.productos });
         })
         .catch(e => {
             console.log('error al cargar los productos' + e)
         })
     }
+    
     render(){
+
+        const {productos} = this.state
+
         return(
-            <>
-            <h1>Hola {this.state.name_user}, Bienvenido a Super Loto</h1>
-            </>
+            <div>
+            <h1>Hola {this.state.name_user}, Vamos a comprar?</h1>
+                <div>
+                    {productos.map(producto =>(
+                    <article key={producto._id}>
+                        <strong>{producto.name}</strong>
+                        <p>{producto.description}</p>
+                    </article>
+                    ))}
+                </div>
+            </div>
         )
     }
 }
