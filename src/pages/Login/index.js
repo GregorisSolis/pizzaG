@@ -44,7 +44,7 @@ render(){
             <div className="container-input">
             <input
                 type="email"
-                placeholder="email"
+                placeholder="e-mail"
                 onChange={e => this.setState({ email: e.target.value})}
                 className="input-email"
             />
@@ -57,7 +57,7 @@ render(){
             </div>
             <button className="btn-login" type="submit">entrar</button>
             <Link to="/register">Criar conta grátis</Link>
-            <hr />
+            <Link to="/register">Você esqueceu sua senha?</Link>
         </form>
     </div>
    ) 

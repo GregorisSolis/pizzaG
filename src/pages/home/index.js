@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import api from '../../services/api'
+import Header from '../../components/Header'
 
 class SignUp extends Component {
     state = {
@@ -37,6 +38,7 @@ class SignUp extends Component {
 
         return(
             <div>
+            <Header/>
             <h1>Hola {this.state.name_user}, Vamos a comprar?</h1>
                 <div>
                     {productos.map(producto =>(

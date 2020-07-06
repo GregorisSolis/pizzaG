@@ -22,10 +22,24 @@
     color: #fff;
     font-size: 1em
     }
-  input{
+ .input-email, .input-pass{
     height: 45px;
     width: 100%;
     border: none;
     padding: 0px 5px;
-    font-size: 1em
+    font-size: 1em;
+    color: #fff
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  a:hover{
+    text-decoration: underline
   }

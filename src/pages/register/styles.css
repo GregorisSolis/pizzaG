@@ -1,0 +1,81 @@
+.container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6600cc , #0066ff);
+    max-width: 100%
+  }
+
+.container-form{
+  background: rgba(0,0,0, 0.4);
+  height: 80vh;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.container-input_register{
+  display: grid;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.input-email_register,
+.input-password_register,
+.input-password2_register,
+.input-name_register{
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: 1px #fff solid;
+
+  height: 45px;
+  width: 100%;
+  padding: 0px 5px;
+  font-size: 1em;
+  color: #fff
+}
+
+.input-email_register:focus,
+.input-password_register:focus,
+.input-password2_register:focus,
+.input-name_register:focus{
+  border-bottom: 2px #fff solid;
+}
+
+.link-login{padding: 5px}
+
+.btn-register{
+  background: transparent;
+  border:1px #fff solid;
+  border-radius: 5px;
+  color:#fff;
+  padding: 5px 18px;
+}
+
+.btn-register:hover{
+  background: #fff;
+  color:#0066ff;
+  border:none;
+  padding: 6px 18px;
+}
+
+
+.container-btn{width: 20%; margin: 8px auto;}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  a:hover{
+    text-decoration: underline
+  }
+
+  h2{color: #fff; text-align: center;padding: 12px}
+
+  p{color: red; text-align: center;padding: 12px}
