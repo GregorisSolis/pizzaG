@@ -10,7 +10,8 @@ class SignIn extends Component {
     state = {
         email: "",
         password: "",
-        error: ""
+        error: "",
+        esAdmin: false
     }
    
 handleSignIn = async e => {
@@ -22,15 +23,22 @@ handleSignIn = async e => {
     }else {
         try{
             const response = await api.post("/auth/authenticate", {email, password})
-            login(response.data.token)
-            
+            login(response.data.token)    
             localStorage.setItem('@superloto-app/nameUser', response.data.user.name)
 
-            this.props.history.push("/app")
+            this.setState({esAdmin: response.data.user.isAdmin})
+
+            if(this.state.esAdmin !== true){
+                localStorage.setItem('@superloto-app/sesion', '4rr55z')
+            }else{
+                localStorage.setItem('@superloto-app/sesion', 'm4r4ng4')
+            }
+
+            this.props.history.push("/")
         }
         catch (err){
             this.setState({
-                error: "error al hacer login, verifica!!"
+                error: "el email o la contraseña esta errada!"
             })
         }
     }
@@ -40,7 +48,7 @@ render(){
    return(
     <div className="container-login">
         <form onSubmit={this.handleSignIn}>
-            {this.state.error && <p>{this.state.error}</p>}
+            {this.state.error && <p className="error-msg">{this.state.error}</p>}
             <div className="container-input">
             <input
                 type="email"
@@ -56,8 +64,10 @@ render(){
             />
             </div>
             <button className="btn-login" type="submit">entrar</button>
-            <Link to="/register">Criar conta grátis</Link>
-            <Link to="/register">Você esqueceu sua senha?</Link>
+            <div className="container-anclas">
+                <Link to="/register">Criar conta grátis</Link>
+                <Link to="/register">Você esqueceu sua senha?</Link>
+            </div>
         </form>
     </div>
    ) 

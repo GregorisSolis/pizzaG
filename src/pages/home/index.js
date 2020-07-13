@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
-import api from '../../services/api'
+import { withRouter, Link } from 'react-router-dom'
 import Header from '../../components/Header'
+import './styles.css'
+
+//img
+import banner from './banner.png'
 
 class SignUp extends Component {
     state = {
-        productos: [],
-        name_user: "user undefined"
+        name_user: "",
+        user: false
     }
 
     componentDidMount() {
-        this.loadProdcutos();
         this.loadInfoUser()
+        this.hayUser()
     }
 
     //cargar info de user
@@ -20,33 +23,40 @@ class SignUp extends Component {
         this.setState({ name_user: userName})
     }
 
-    //cargar los productos
-    loadProdcutos = async () => {
-
-        api.get('/productos/todos')
-        .then(res => {
-            this.setState({ productos: res.data.productos });
-        })
-        .catch(e => {
-            console.log('error al cargar los productos' + e)
-        })
+    hayUser = () =>{
+        let verificadorUSer = localStorage.getItem('@superloto-app/nameUser')
+        if (verificadorUSer != null){
+            this.setState({user: true})
+        }
     }
     
     render(){
 
-        const {productos} = this.state
+        const {name_user, user} = this.state
 
         return(
-            <div>
-            <Header/>
-            <h1>Hola {this.state.name_user}, Vamos a comprar?</h1>
-                <div>
-                    {productos.map(producto =>(
-                    <article key={producto._id}>
-                        <strong>{producto.name}</strong>
-                        <p>{producto.description}</p>
-                    </article>
-                    ))}
+            <div className="container-home">
+                <Header/>
+                <div className="container-banner">
+                    <img src={banner} alt="banner"/>
+                    <div className="container-titulos">
+                        <h1 className="titulo-banner">
+                        Hola {user ? name_user : 'Bienvenido'},
+                        </h1>
+                        <h4 className="subtitulo-banner">¿Que te gustaria comer hoy?</h4>
+                    </div>
+                </div>
+
+                <div className="container-categorias">
+                    <div className="container-postres">
+                        <p>Postres</p>
+                    </div>
+                    <div className="container-pizzas">
+                        <p>Pizza</p>
+                    </div>
+                    <div className="container-burger">
+                        <Link to="/hamburguesas"><p>Hamburguesas</p></Link>
+                    </div>
                 </div>
             </div>
         )

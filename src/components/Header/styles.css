@@ -1,8 +1,11 @@
 .container-header{
 	max-width: 100%;
-	background: black;
+	background: #0c0f0a;
 	display: flex;
 	justify-content: center;
+	box-shadow: -1px 5px 5px rgba(0,0,0,0.6);
+	position: relative;
+	z-index: 2;
 }
 
 #main-header {
@@ -10,15 +13,21 @@
 	height: 50px;
 	font-size: 18px;
 	font-weight: bold;
-	color: #FFF;
+	color: black;
 	display: flex;
 	justify-content:space-between;
 	align-items: center;
 }
-.routes-header{
-	color: #fff;
-	text-decoration: none;
-	padding: 5px;
+
+.routes-header {
 	display: flex;
-	justify-content: center;
 }
+
+.routes-header a{
+	color: #fff;
+}
+
+.container-header h2{color: #fff;}
+
+.logo-header{display: flex;align-items: center;}
+.logo-header img{width: 40px; height: 40px}

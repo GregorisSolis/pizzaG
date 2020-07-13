@@ -31,14 +31,15 @@
     color: #fff
   }
 
-  a {
-    color: #fff;
+  .container-anclas a {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
   }
+
+  .container-login .error-msg{color: red; text-align: center;padding: 12px}
 
   a:hover{
     text-decoration: underline

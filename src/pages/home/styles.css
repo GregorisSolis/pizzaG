@@ -1,0 +1,66 @@
+.container-home{
+	max-width: 100%;
+}
+
+.container-banner{
+	height: 88vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4em
+}
+
+.container-banner img{
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	height: 97vh
+}
+
+.container-home .titulo-banner{
+	margin: 0px;
+	position: relative;
+	z-index: 2;
+	color:#fff;
+}
+
+.container-home .subtitulo-banner{
+	margin: 2px;
+	position: relative;
+	z-index: 2;
+	color:#fff;
+}
+
+.container-titulos{
+	text-align: center;
+}
+
+.container-home .info-producto{
+	position: absolute;
+}
+
+.container-categorias{
+	max-width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: -60px;
+	z-index: 2;
+	position: relative;
+}
+
+.container-categorias p{
+	width: 150px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+	border-radius: 5px;
+	background: rgb(26, 26, 26);
+	color: #fff;
+}
+
+.container-categorias p:hover{
+	background: #fff;
+	color: black
+}

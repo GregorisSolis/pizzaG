@@ -1,6 +1,5 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
-import * as yup from 'yup'
 import api from '../../services/api'
 
 import './styles.css'
@@ -21,18 +20,21 @@ class Register extends Component{
 
 		if(!name || !password || !email || !password2){
 			this.setState({error: "debes llenar todos los campos!"})
-		}else 
-		if(password !== password2){
+
+		}else if(password.length < 8){
+				this.setState({error: "la contraseña debe tener mas de 8 caracteres"})
+		} else if(password !== password2){
 				this.setState({error: "las contraseña no coinciden."})
-			} 
+		}
 		else {
 			try{
 				await api.post('/auth/register', {name, password, email})
 				.then(resp =>{
-					this.props.history.push('/')
+					this.props.history.push('/login')
 				})
 				.catch(e => {
 					this.setState({error: "email ya registrado!"})
+					console.log(e)
 				})
 			}
 			catch(err) {
@@ -45,7 +47,7 @@ class Register extends Component{
 	render(){
 		return(
 		<div className="container-register">
-			<form className="container-form" onSubmit={this.handleRegister} validationSchema={validations}>
+			<form className="container-form" onSubmit={this.handleRegister}>
 				<h2>Register</h2>
 				<div className="container-input_register">
 					<input
@@ -81,7 +83,7 @@ class Register extends Component{
 					<button className="btn-register" type="submit">register</button>
 				</div>
 				<Link to="/" className="link-login">já tem uma conta?</Link>
-				{this.state.error && <p>{this.state.error}</p>}
+				{this.state.error && <p className="error-msg">{this.state.error}</p>}
 			</form>
 		</div>
 		)

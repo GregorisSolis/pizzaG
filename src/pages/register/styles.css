@@ -78,4 +78,4 @@ a {
 
   h2{color: #fff; text-align: center;padding: 12px}
 
-  p{color: red; text-align: center;padding: 12px}
+  .container-register .error-msg{color: red; text-align: center;padding: 12px}
