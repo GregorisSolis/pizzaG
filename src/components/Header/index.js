@@ -21,10 +21,10 @@ class Header extends Component{
     	let verificadorUSer = localStorage.getItem('@superloto-app/nameUser')
     	let verificadorAdmin = localStorage.getItem('@superloto-app/sesion')
 
-    	if (verificadorUSer != null){
+    	if (verificadorUSer !== null){
     		this.setState({user: true})
 
-    		if (verificadorAdmin != this.state.sesion){
+    		if (verificadorAdmin !== this.state.sesion){
     			this.setState({isAdmin: true})
     		}
     	}

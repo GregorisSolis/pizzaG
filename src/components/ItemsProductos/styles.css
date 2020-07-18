@@ -1,0 +1,71 @@
+.container-burger .info-producto{
+	position: absolute;
+	z-index: 1
+}
+
+.items-producto{
+	background: #fff;
+	color: black;
+	margin: 1%;
+	border-radius: 5px;
+	padding: 2% 3%;
+	width: 270px;
+	height: 110px;
+	margin: auto;
+}
+
+.funcionalidades-productos button{
+	background: black;
+	color: #fff;
+}
+.cantidades{
+	display: flex; 
+	height: 30px; 
+	width: 74px; 
+	border: 1px solid black;
+	justify-content: space-between;
+	border-radius: 5px
+}
+.cantidades button{padding: 0px 8px; border: none}
+.cantidades button:focus{outline: none}
+.cantidades{margin:0px}
+.titulo-producto h4{margin:0px 5px; color: green}
+.titulo-producto{display: flex; justify-content: center;}
+.info-producto p{margin: 5px}
+.description{display: flex;width: 70%;}
+.container-burger .funcionalidades-productos{display: flex; justify-content: center; margin: 5%}
+
+h5{position: absolute; z-index:1}
+
+.container-listaProducto{
+	display: grid;
+	grid-template-columns: 300px 300px 300px 300px;
+	grid-template-rows: 130px 130px 130px 130px;
+	width: 90%; 
+	margin: 3% auto;
+}
+.funcionalidades-productos{
+	display: flex;
+	justify-content: space-between;
+	margin: 5% auto;
+	width: 100%;
+	align-items: center;
+}
+
+.funcionalidades-productos .count-producto{padding: 8%}
+
+.btn-eliminar, .btn-editar{
+	background: transparent;
+	padding: 4px;
+	border-radius: 4px;
+	margin: 0px 2px;
+}
+
+.btn-eliminar{border: 1px solid red; color: red}
+.btn-editar{border: 1px solid #046E8F; color:#046E8F}
+
+.btn-eliminar:hover{background: red; color: #fff;}
+.btn-editar:hover{background: #046E8F; color:#fff;}
+
+.btn-eliminar:focus{outline: none}
+.btn-editar:focus{outline: none}

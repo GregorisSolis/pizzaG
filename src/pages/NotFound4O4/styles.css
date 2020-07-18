@@ -1,0 +1,9 @@
+.container-NotFound{
+	background: #02111B;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.NotFound-text{text-align: center;}
+.NotFound-text h1{font-size: 5em}

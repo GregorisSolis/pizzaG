@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './styles.css'
 
 const  ItemsProducto = props => {
 
@@ -21,7 +22,7 @@ const  ItemsProducto = props => {
             </div>
             <div className="cantidades">
                 <button onClick={() => setCount(count + 1)}>+</button>
-               	<p>{count}</p>
+               	<p className="count-producto" >{count}</p>
                 <button onClick={() => setCount(count - 1)}>-</button>
             </div>
         </div>

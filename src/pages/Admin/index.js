@@ -1,31 +1,61 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router-dom'
 import Header from '../../components/Header'
-import api from '../../services/api'
+import NotFound from '../NotFound4O4'
 
 import './styles.css'
 
-import bannerAdmin from './bannerAdmin.png'
-import iconTuerca from './tuerca.png'
-import pedidoIcon from './pedidoIcon.png'
+import bannerAdmin from './img/bannerAdmin.png'
+import iconTuerca from './img/tuerca.png'
+import pedidoIcon from './img/pedidoIcon.png'
 
 class Admin extends Component{
-	render(){
+	state = {
+		user: false,
+		isAdmin: false,
+		sesion: '4rr55z'
+	}
+	
+	componentDidMount() {
+      this.hayUser()
+    }
+
+    hayUser = () =>{
+    	let verificadorUSer = localStorage.getItem('@superloto-app/nameUser')
+    	let verificadorAdmin = localStorage.getItem('@superloto-app/sesion')
+
+    	if (verificadorUSer !== null){
+    		this.setState({user: true})
+
+    		if (verificadorAdmin !== this.state.sesion){
+    			this.setState({isAdmin: true})
+    		}
+    	}
+    }
+
+		render(){
+			const {isAdmin} = this.state
 		return(
-			<div className="container-admin">
+		<>
+		{isAdmin ?
+		<div className="container-admin">
 			<Header/>
 				<div className="bannerAdmin">
 						<img src={bannerAdmin} alt="mesa con comida" />
-						<h1 className="titulo-banner_admin">Bienvenido Admin</h1>
+						<h1 className="titulo-banner_admin">Bienvenido, jefe!</h1>
 				</div>
 				<div className="container-administracion">
 					<div className="icon-pedidos">
-						<img src={pedidoIcon} alt="icono de pedidos" />
+						<Link to="/admin/gerencia/pedidos"><img src={pedidoIcon} alt="icono de pedidos" /></Link>
 					</div>
 					<div className="icon-herramientas">
-						<img src={iconTuerca} alt=" icono tuerca"/>
+						<Link to="/admin/gerencia/setting"><img src={iconTuerca} alt=" icono tuerca"/></Link>
 					</div>
 				</div>
-			</div>
+			</div> :
+			<NotFound/>
+		}
+		</>
 		)
 	}
 }

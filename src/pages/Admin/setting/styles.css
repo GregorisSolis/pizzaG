@@ -1,0 +1,62 @@
+.container-setting{
+	background: linear-gradient(to right, #0D1821 , #344966);
+}
+
+.container-inputs{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-inputs input{
+	margin: 7px 15px;
+	height: 30px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	padding: 5px;
+	text-align: center;
+}
+
+.container-inputs input:hover,.container-inputs input:focus{
+		border-bottom: 2px solid #fff;
+}
+
+.container-setting .container-btn{
+	display: flex;
+	margin: 2% auto;
+	justify-content: center;
+}
+
+.container-setting .container-btn button{
+	margin: 0px 5%;
+}
+.btn-edit, .btn-cancelar-edit{
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 5px;
+	padding: 1%;
+}
+
+.container-msg{
+	background: #fff;
+	width: 80%;
+	height: 40px;
+	margin: 0px auto;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-description_producto{width: 75%}
+
+.btn-edit:hover{color:#046E8F; background: #fff}
+.btn-cancelar-edit:hover{color: red ;background: #fff}
+.btn-register:focus{outline: none}
+.container-setting .error-msg {color: red}
+.container-setting .success-msg{color: green}
+.container-form_producto{text-align: center;}

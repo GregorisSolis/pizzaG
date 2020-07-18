@@ -10,3 +10,6 @@ body{
 	background: #c9c9c9;
 	color: #333;
 }
+button:focus {
+  outline: none;
+}
