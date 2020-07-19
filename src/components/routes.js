@@ -6,6 +6,7 @@ import SignIn from '../pages/Login'
 import Register from '../pages/register'
 import Home from '../pages/home'
 import Burge from '../pages/burge'
+import Pizza from '../pages/pizza'
 import Admin from  '../pages/Admin'
 import Pedidos from  '../pages/Admin/pedidos'
 import Setting from  '../pages/Admin/setting'
@@ -33,6 +34,7 @@ const Routes = () => (
 			<Route exact path="/login" component={SignIn} />
 			<Route exact path="/register" component={Register} />
       <Route exact path="/hamburguesas" component={Burge}/>
+      <Route exact path="/pizzas" component={Pizza}/>
       <PrivateRoute exact path="/admin/gerencia" component={Admin}/>
       <PrivateRoute exact path="/admin/gerencia/pedidos" component={Pedidos}/>
       <PrivateRoute exact path="/admin/gerencia/setting" component={Setting}/>

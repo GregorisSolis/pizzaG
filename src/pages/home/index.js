@@ -49,13 +49,13 @@ class SignUp extends Component {
 
                 <div className="container-categorias">
                     <div className="container-postres">
-                        <p>Postres</p>
+                        <Link to="/pizzas"><p>Postre</p></Link>
                     </div>
                     <div className="container-pizzas">
-                        <p>Pizza</p>
+                        <Link to="/pizzas"><p>Pizza</p></Link>
                     </div>
                     <div className="container-burger">
-                        <Link to="/hamburguesas"><p>Hamburguesas</p></Link>
+                        <Link to="/hamburguesas"><p>Hamburguesa</p></Link>
                     </div>
                 </div>
             </div>

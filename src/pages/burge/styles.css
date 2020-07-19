@@ -8,3 +8,11 @@
 	position: absolute;
 	z-index: 1
 }
+.container-burger .container-banner_burger h1{
+	position: relative;
+	z-index: 1;
+	color: #FFF;
+	margin: 0px;
+	padding: 1%;
+	text-align: center;
+}

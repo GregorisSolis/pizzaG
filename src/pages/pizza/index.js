@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import Header from '../../components/Header'
-import bannerBurger from './bannerBurger.png'
+import bannerPizza from './bannerPizza.png'
 import api from '../../services/api'
 import './styles.css'
 
 import ItemsProducto from '../../components/ItemsProductos'
 
-class Burger extends Component {
+class Pizza extends Component {
     state = {
         productos: [],
-        burger:[]
+        pizza:[]
     }
 
     componentDidMount() {
@@ -21,38 +21,38 @@ class Burger extends Component {
         api.get('/productos/todos')
         .then(res => {
             this.setState({ productos: res.data.productos });
-             this.loapBurger()
+             this.loapPizza()
         })
         .catch(e => {
             console.log('error al cargar los productos' + e)
         })
     }
 
-    loapBurger = () => {
+    loapPizza = () => {
         let selecionados = []
 
         for (let i = 0; i < this.state.productos.length; i++) {
 
-            if(this.state.productos[i].categoria === 'burger'){
+            if(this.state.productos[i].categoria === 'pizzas'){
                 selecionados.push(this.state.productos[i])
             }
         }
-        this.setState({ burger: selecionados });
+        this.setState({ pizza: selecionados });
     }
 
 	render(){
 
-		const {burger} = this.state
-        console.log(burger)
+		const {pizza} = this.state
+        console.log(pizza)
 		return(
-			<div className="container-burger">
+			<div className="container-pizza">
     			<Header/>
-        			<div className="container-banner_burger">
-                        <img src={bannerBurger} alt="banner"/>
+        			<div className="container-banner_pizza">
+                        <img src={bannerPizza} alt="banner"/>
                     <div className="container-listProducto">
-                        <h1>Hamburguesas</h1>
+                        <h1>Pizza</h1>
                         <div className="info-producto">
-                            {burger.map(producto =>(
+                            {pizza.map(producto =>(
                             <article key={producto._id} className="items-producto">
                             <ItemsProducto 
                             name={producto.name}
@@ -69,4 +69,4 @@ class Burger extends Component {
 	}
 }
 
-export default Burger
+export default Pizza

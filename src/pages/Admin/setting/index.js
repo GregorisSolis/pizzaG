@@ -45,14 +45,14 @@ class Setting extends Component{
 	handleRegisterProducto = async e => {
 		e.preventDefault()
 
-		const {name,precio,codigo,cantidad,description,pages,categoria} = this.state
+		const {name,precio,codigo,cantidad,description,categoria} = this.state
 
-		if(!name || !precio || !codigo || !cantidad || !description || !pages || !categoria){
+		if(!name || !precio || !codigo || !cantidad || !description || !categoria){
 			this.setState({error: "debes llenar todos los campos!"})
 		}
 		else {
 			try{
-				await api.post('/productos', {name,precio,codigo,cantidad,description,pages,categoria})
+				await api.post('/productos', {name,precio,codigo,cantidad,description,categoria})
 				.then(resp =>{
 					this.loadProdcutos()
 					this.setState({success :'producto agregado exitosamente!'})
@@ -68,6 +68,7 @@ class Setting extends Component{
 			}
 		}
 	this.timeMsg()
+	this.limpiarInputs()
 	} 
 
     hayUser = () =>{
@@ -88,7 +89,6 @@ class Setting extends Component{
     	await api.delete(`/productos/${_id}`)
     	.then(res =>{
     		this.loadProdcutos()
-    		this.setState({name: ''})
     		this.setState({success :'producto eliminado exitosamente!'})
     	})
     	.catch(e =>{
@@ -100,10 +100,10 @@ class Setting extends Component{
     editarProduct = e =>{
     	e.preventDefault()
 
-    	const {name,precio,codigo,cantidad,description,pages,categoria,producto_id} = this.state
+    	const {name,precio,codigo,cantidad,description,categoria,producto_id} = this.state
 
 				api.put(`/productos/${producto_id}`,
-							 {name,precio,codigo,cantidad,description,pages,categoria})
+							 {name,precio,codigo,cantidad,description,categoria})
 				.then(resp =>{
 					this.loadProdcutos()
 					this.setState({success :'producto se ha editado exitosamente!'})
@@ -112,9 +112,8 @@ class Setting extends Component{
 					this.setState({error: "el producto no pudo ser editado"})
 					console.log(err)
 				})
-
-			this.limpiarInputs()
 			this.timeMsg()
+			this.limpiarInputs()
 			}
 
     activarEdicion = (producto) => {
@@ -129,6 +128,13 @@ class Setting extends Component{
     	this.setState({categoria: producto.categoria})
     }
     limpiarInputs = () =>{
+    	this.refs.nameProducto.value="";
+    	this.refs.precio.value="";
+    	this.refs.description.value="";
+    	this.refs.codigo.value="";
+    	this.refs.cantidad.value="";
+    	this.refs.categoria.value="";
+
     	this.setState({edicion: false})
 
     	this.setState({producto_id: ''})
@@ -138,13 +144,6 @@ class Setting extends Component{
     	this.setState({description:''})
     	this.setState({cantidad:''})
     	this.setState({categoria:''})
-
-    	this.refs.name.value="";
-    	this.refs.precio.value="";
-    	this.refs.description.value="";
-    	this.refs.codigo.value="";
-    	this.refs.cantidad.value="";
-    	this.refs.categoria.value="";
     }
 
     timeMsg = () => {
@@ -170,7 +169,7 @@ class Setting extends Component{
 					type="text"
 					name="name"
 					placeholder="nombre del producto"
-					ref="name"
+					ref="nameProducto"
 					value={this.state.name}
 					onChange={e => this.setState({ name: e.target.value})}
 				/>
@@ -231,6 +230,7 @@ class Setting extends Component{
 					className="input-name_producto" 
 					type="text"
 					name="name"
+					ref="nameProducto"
 					placeholder="nombre del producto"
 					onChange={e => this.setState({ name: e.target.value})}
 				/>
@@ -238,6 +238,7 @@ class Setting extends Component{
 					className="input-precio_producto" 
 					type="text"
 					name="precio"
+					ref="precio"
 					placeholder="precio del producto"
 					onChange={e => this.setState({ precio: e.target.value})}
 				/>
@@ -245,6 +246,7 @@ class Setting extends Component{
 					className="input-codigo_producto" 
 					type="text"
 					name="codigo"
+					ref="codigo"
 					placeholder="codigo del producto"
 					onChange={e => this.setState({ codigo: e.target.value})}
 				/>
@@ -252,6 +254,7 @@ class Setting extends Component{
 					className="input-cantidad_producto" 
 					type="text"
 					name="cantidad"
+					ref="cantidad"
 					placeholder="cantidad del producto"
 					onChange={e => this.setState({ cantidad: e.target.value})}
 				/>
@@ -259,6 +262,7 @@ class Setting extends Component{
 					className="input-categoria_producto" 
 					type="text"
 					name="categoria"
+					ref="categoria"
 					placeholder="categoria del producto"
 					onChange={e => this.setState({ categoria: e.target.value})}
 				/>
@@ -266,6 +270,7 @@ class Setting extends Component{
 					className="input-description_producto" 
 					type="text"
 					name="description"
+					ref="description"
 					placeholder="descripcion del producto"
 					onChange={e => this.setState({ description: e.target.value})}
 				/>
