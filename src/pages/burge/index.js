@@ -5,6 +5,7 @@ import api from '../../services/api'
 import './styles.css'
 
 import ItemsProducto from '../../components/ItemsProductos'
+import Bebidas from '../../components/Bebidas'
 
 class Burger extends Component {
     state = {
@@ -43,7 +44,6 @@ class Burger extends Component {
 	render(){
 
 		const {burger} = this.state
-        console.log(burger)
 		return(
 			<div className="container-burger">
     			<Header/>
@@ -62,6 +62,7 @@ class Burger extends Component {
                             </article>
                             ))}
                         </div>
+                        <Bebidas/>
                     </div>
                     </div>
 			</div>

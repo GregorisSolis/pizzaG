@@ -5,8 +5,9 @@
 .container-pizza .container-banner_pizza img{
 	width: 100%;
 	height: 100vh;
-	position: absolute;
-	z-index: 1
+	position: fixed;
+	z-index: 1;
+	margin: -50px 0px
 }
 
 .container-pizza .container-banner_pizza h1{
@@ -16,6 +17,7 @@
 	margin: 0px;
 	padding: 1%;
 	text-align: center;
+	text-shadow: 2px 2px 2px black
 }
 
 .info-producto{
@@ -23,5 +25,5 @@
 	z-index: 1;
 	display: grid;
 	grid-template-columns: 320px 320px 320px 320px;
-	grid-template-rows: 120px 120px 120px 120px
+	grid-template-rows:	185px
 }

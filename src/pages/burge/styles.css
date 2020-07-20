@@ -1,3 +1,14 @@
+.container-burger .info-producto{
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 310px 310px 310px 310px;
+	grid-template-rows: 185px;
+	margin: auto;
+}
+
+.container-listProducto{margin: 0px 4%}
+
 .container-burger{
 	max-width: 100%;
 }
@@ -5,8 +16,9 @@
 .container-burger .container-banner_burger img{
 	width: 100%;
 	height: 100vh;
-	position: absolute;
-	z-index: 1
+	position: fixed;
+	z-index: 1;
+	margin: -50px 0px
 }
 .container-burger .container-banner_burger h1{
 	position: relative;
@@ -15,4 +27,5 @@
 	margin: 0px;
 	padding: 1%;
 	text-align: center;
+	text-shadow: 2px 2px 2px black
 }

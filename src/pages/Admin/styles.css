@@ -6,6 +6,12 @@
 	z-index: 1;
 }
 
+.container-listaProducto{
+	display: grid;
+	grid-template-columns: 320px 320px 320px 320px;
+	margin: 0px 2%
+}
+
 .container-admin h1{
 	position: absolute;
 	z-index: 1;

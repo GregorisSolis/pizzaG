@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
 import Header from '../../components/Header'
-import bannerPizza from './bannerPizza.png'
+import bannerPostre from './bannerPostres.png'
 import api from '../../services/api'
 import './styles.css'
 
 import ItemsProducto from '../../components/ItemsProductos'
 import Bebidas from '../../components/Bebidas'
 
-class Pizza extends Component {
+class Postre extends Component {
     state = {
         productos: [],
-        pizza:[]
+        postre:[]
     }
 
     componentDidMount() {
@@ -22,37 +22,36 @@ class Pizza extends Component {
         api.get('/productos/todos')
         .then(res => {
             this.setState({ productos: res.data.productos });
-             this.loapPizza()
+             this.loapPostre()
         })
         .catch(e => {
             console.log('error al cargar los productos' + e)
         })
     }
 
-    loapPizza = () => {
+    loapPostre = () => {
         let selecionados = []
 
         for (let i = 0; i < this.state.productos.length; i++) {
-
-            if(this.state.productos[i].categoria === 'pizzas'){
+            if(this.state.productos[i].categoria === 'postre'){
                 selecionados.push(this.state.productos[i])
             }
         }
-        this.setState({ pizza: selecionados });
+        this.setState({ postre: selecionados });
     }
 
 	render(){
 
-		const {pizza} = this.state
+		const {postre} = this.state
 		return(
-			<div className="container-pizza">
+			<div className="container-postre">
     			<Header/>
-        			<div className="container-banner_pizza">
-                        <img src={bannerPizza} alt="banner"/>
+        			<div className="container-banner_postre">
+                        <img src={bannerPostre} alt="banner"/>
                     <div className="container-listProducto">
-                        <h1>Pizza</h1>
+                        <h1>Postres</h1>
                         <div className="info-producto">
-                            {pizza.map(producto =>(
+                            {postre.map(producto =>(
                             <article key={producto._id} className="items-producto">
                             <ItemsProducto 
                             name={producto.name}
@@ -70,4 +69,4 @@ class Pizza extends Component {
 	}
 }
 
-export default Pizza
+export default Postre

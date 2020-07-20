@@ -1,0 +1,15 @@
+.container-bebidas .container-banner_bebidas h1{
+	position: relative;
+	z-index: 1;
+	color: #FFF;
+	margin: 0px;
+	padding: 1%;
+	text-align: center;
+}
+
+.info-producto{
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 320px 320px 320px 320px;
+}
