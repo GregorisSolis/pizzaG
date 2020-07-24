@@ -4,13 +4,17 @@ import bannerPostre from './bannerPostres.png'
 import api from '../../services/api'
 import './styles.css'
 
-import ItemsProducto from '../../components/ItemsProductos'
 import Bebidas from '../../components/Bebidas'
+import ItemsProducto from '../../components/ItemsProducto'
 
-class Postre extends Component {
-    state = {
+export default class Postre extends Component {
+    constructor(props){
+        super(props);
+
+    this.state = {
         productos: [],
         postre:[]
+    }
     }
 
     componentDidMount() {
@@ -40,13 +44,13 @@ class Postre extends Component {
         this.setState({ postre: selecionados });
     }
 
-	render(){
+    render(){
 
-		const {postre} = this.state
-		return(
-			<div className="container-postre">
-    			<Header/>
-        			<div className="container-banner_postre">
+        const {postre} = this.state
+        return(
+            <div className="container-postre">
+                <Header/>
+                    <div className="container-banner_postre">
                         <img src={bannerPostre} alt="banner"/>
                     <div className="container-listProducto">
                         <h1>Postres</h1>
@@ -64,9 +68,10 @@ class Postre extends Component {
                         <Bebidas/>
                     </div>
                     </div>
-			</div>
-		)
-	}
+            </div>
+        )
+    }
 }
 
-export default Postre
+
+

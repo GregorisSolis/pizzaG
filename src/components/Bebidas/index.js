@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import api from '../../services/api'
 import './styles.css'
 
-import ItemsProducto from '../../components/ItemsProductos'
+import ItemsProducto from '../../components/ItemsProducto'
 
 
 class Bebidas extends Component {

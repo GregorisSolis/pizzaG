@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import NotFound from '../../NotFound4O4'
 import Header from '../../../components/Header'
-import ItemsProducto from '../../../components/ItemsProductos'
+import ItemsProducto from '../../../components/ItemsProducto'
 import api from '../../../services/api'
 
 import './styles.css'

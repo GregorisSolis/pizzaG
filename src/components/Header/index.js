@@ -2,9 +2,10 @@ import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import { logout } from '../../services/auth'
 import './styles.css'
-
 //img
 import burgerImg from './pizza.png'
+import IconCart from './IconCart'
+
 
 class Header extends Component{
 	state = {
@@ -49,7 +50,7 @@ class Header extends Component{
 				</div>
 				<div className="routes-header">
 					<Link to="/">Home</Link>
-					<Link to="/">Carrito</Link>
+					<IconCart/>
 					{isAdmin ? <Link to="/admin/gerencia">Admin</Link> : ''}
 					{this.state.user ? <Link to="/login" onClick={this.handleLogout}>Salir</Link>:
 					<Link to="/login">Entrar</Link>}

@@ -4,7 +4,7 @@ import bannerPizza from './bannerPizza.png'
 import api from '../../services/api'
 import './styles.css'
 
-import ItemsProducto from '../../components/ItemsProductos'
+import ItemsProducto from '../../components/ItemsProducto'
 import Bebidas from '../../components/Bebidas'
 
 class Pizza extends Component {
