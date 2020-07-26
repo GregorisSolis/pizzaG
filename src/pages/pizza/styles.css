@@ -24,6 +24,6 @@
 	position: relative;
 	z-index: 1;
 	display: grid;
-	grid-template-columns: 320px 320px 320px 320px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows:	185px
 }

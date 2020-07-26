@@ -28,7 +28,7 @@
     border: none;
     padding: 0px 5px;
     font-size: 1em;
-    color: #fff
+    color: black
   }
 
   .container-anclas a {
@@ -37,10 +37,12 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
+    color: #fff
   }
 
   .container-login .error-msg{color: red; text-align: center;padding: 12px}
 
-  a:hover{
-    text-decoration: underline
+  .container-anclas a:hover{
+    text-decoration: underline;
+    color: #fff
   }

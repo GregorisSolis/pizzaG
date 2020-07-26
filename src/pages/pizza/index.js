@@ -58,6 +58,7 @@ class Pizza extends Component {
                             name={producto.name}
                             precio={producto.precio} 
                             description={producto.description}
+                            cantidad={producto.cantidad}
                             />
                             </article>
                             ))}

@@ -39,13 +39,15 @@
 	position: absolute;
 }
 
+.container-categorias a{text-decoration: none}
+
 .container-categorias{
 	max-width: 100%;
 	display: flex;
 	justify-content: space-around;
 	margin-top: -60px;
 	z-index: 2;
-	position: relative;
+	position: relative; 
 }
 
 .container-categorias p{

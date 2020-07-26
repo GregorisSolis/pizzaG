@@ -1,4 +1,7 @@
 .items-producto{
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-rows: 25px 1fr;
 	background: #fff;
 	color: black;
 	border-radius: 5px;
@@ -9,38 +12,39 @@
 	box-shadow: 2px 2px 2px rgba(0,0,0, .7)
 }
 
-.funcionalidades-productos button{
-	background: black;
-	color: #fff;
-}
 .cantidades{
 	display: flex; 
-	height: 30px; 
-	width: 77px; 
-	border: 1px solid black;
+	height: 30px;  
 	justify-content: space-between;
-	border-radius: 5px
-}
-.cantidades button{padding: 0px 8px; border: none}
-.cantidades button:focus{outline: none}
-.cantidades{margin:0px}
-.titulo-producto h4{margin:0px 5px; color: green}
-.titulo-producto{display: flex; justify-content: center;}
-.info-producto p{margin: 5px}
-.description{display: flex;width: 70%;}
-.container-burger .funcionalidades-productos{ margin: 5% auto;display: flex; justify-content: center; align-items: baseline}
-
-h5{position: absolute; z-index:1}
-
-.funcionalidades-productos{
-	display: flex;
-	justify-content: space-between;
-	margin: 5% auto;
-	width: 100%;
 	align-items: center;
 }
+.btn-agregar{
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	background: #212529;
+	border-radius: 5px;
+	padding-top: 1.2%
+}
+.btn-agregar:hover{
+	background: #343a40;
+	box-shadow: .4px 1px #212529
+}
 
-.funcionalidades-productos .count-producto{padding: 2%;align-items: center; display: flex;}
+.container-burger .funcionalidades-productos{ 
+	margin: 1px;
+	display: flex; 
+	justify-content: center;
+	align-items: baseline
+}
+
+
+
+.funcionalidades-productos .count-producto{
+	padding: 2%;
+	align-items: center;
+	display: flex;
+}
 
 .btn-eliminar, .btn-editar{
 	background: transparent;
@@ -57,3 +61,12 @@ h5{position: absolute; z-index:1}
 
 .btn-eliminar:focus{outline: none}
 .btn-editar:focus{outline: none}
+
+.cantidades{margin:0px}
+.titulo-producto h4{margin:0px 5px; color: green}
+.titulo-producto{display: flex; justify-content: center;}
+.info-producto p{margin: 5px}
+.description{display: flex;}
+
+.funcionalidades-productos button{background: black; color: #fff;}
+h5{position: absolute; z-index:1}

@@ -1,0 +1,14 @@
+.container-Items_carrito{
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; 
+	grid-template-rows:	185px
+}
+
+.item-producto_info{
+	background: #FFF;
+	width: 330px;
+	height: 120px;
+	border-radius: 5px;
+	padding: 1% 2%;
+}

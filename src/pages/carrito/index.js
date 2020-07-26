@@ -1,38 +1,26 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import Header from '../../components/Header'
-
-import { removeItem } from '../../store/cart'
+import ItemsDelCarrito from '../../components/ItemsDelCarrito'
+import { useSelector } from 'react-redux'
+import './styles.css'
 
 export default function Carrito() {
 	
 	const cart = useSelector(state => state.cart)
-	const dispatch = useDispatch()
 
-	//uso name por que no estoy obteniendo el id
-	function removeItemCart(name){
-		dispatch(removeItem(name))
-	}
 
 	return(
 		<div className="container-carrito">
 		<Header/>
-			<div className="items-cart">
-				{cart.length === 0 ?( <p>Aun no hay productos en el carrito...</p>
-					):(
-					<React.Fragment>
-						{cart.map((item) =>(
-							<div key={item.name}>
-								<p>{item.name}</p>
-								<p>{item.description}</p>
-								<p>{item.precio}</p>
-								<button onClick={() => removeItemCart(item.name)}>eliminar</button>
-							</div>
-						))}
-						
-					</React.Fragment>
-					)}
+			{cart.length === 0 ?(
+				<div className="items-cart">
+						<h1>Aun no tienes productos en el carrito.</h1>
+				</div>
+			):(
+			<div className="container-items_compras">
+				<ItemsDelCarrito key={cart._id}/>
 			</div>
+			)}
 		</div>
 	)
 }

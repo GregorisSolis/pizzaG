@@ -43,7 +43,7 @@
   border-bottom: 2px #fff solid;
 }
 
-.link-login{padding: 5px}
+.link-login{padding: 5px; display: flex; justify-content: center; color: #FFF; text-decoration: none}
 
 .btn-register{
   background: transparent;
@@ -63,7 +63,7 @@
 
 .container-btn{width: 20%; margin: 8px auto;}
 
-a {
+a .link-login {
     color: #fff;
     text-decoration: none;
     display: flex;

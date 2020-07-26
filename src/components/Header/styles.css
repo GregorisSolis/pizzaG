@@ -21,12 +21,25 @@
 
 .routes-header {
 	display: flex;
+	justify-content: space-between; 
+	align-items: center;
 }
 
-.routes-header a{
+.link{
 	color: #fff;
+	text-decoration: none;
+	margin-right: 5%
 }
 
+.link a:hover{
+	text-decoration: underline; 
+}
+
+a .icon-cart{text-decoration: none;}
+
+.icon-cart{display: flex; align-items: center;}
+.icon-cart p{padding: 0px 15%}
+ 
 .container-header h2{color: #fff;}
 
 .logo-header{display: flex;align-items: center;}
