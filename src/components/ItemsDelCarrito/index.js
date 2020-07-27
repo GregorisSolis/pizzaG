@@ -21,9 +21,13 @@ export default function ItemsDelCarrito() {
 				<div className="item-producto_info" key={item.name}>
 					<h3>{item.name}</h3>
 					<p>{item.description}</p>
-					<p>{item.precio}</p>
 					
-					<button onClick={() => removeItemCart(item.name)}>eliminar</button>
+					<div className="container-btn_precio">
+						<button onClick={() => removeItemCart(item.name)}
+							>eliminar
+						</button>
+						<p>{item.precio}</p>
+					</div>
 				</div>
 			))}				
 		</div>

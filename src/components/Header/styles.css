@@ -37,7 +37,7 @@
 
 a .icon-cart{text-decoration: none;}
 
-.icon-cart{display: flex; align-items: center;}
+.container-header .icon-cart{display: flex; align-items: center;}
 .icon-cart p{padding: 0px 15%}
  
 .container-header h2{color: #fff;}

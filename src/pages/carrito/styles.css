@@ -1,11 +1,9 @@
 .container-carrito{
 	background: linear-gradient(to right, #05668d , #02c39a);
-	height: 100vh
 }
 .container-carrito .items-cart {
 	width: 100%;
 	text-align: center;
-	margin: 2% auto;
 }
 
 .container-items_compras{
@@ -14,4 +12,14 @@
 	display: flex;
 	margin: 2% auto;
 	justify-content: center;
+}
+
+.items-cart {
+	color: #fff;
+	height: 92.8vh
+}
+
+
+.carrito-titulo{
+	padding-top: 5% 
 }

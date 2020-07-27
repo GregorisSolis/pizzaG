@@ -49,10 +49,30 @@ class Header extends Component{
 					<img src={burgerImg} alt="logo de pizza g"/>
 				</div>
 				<div className="routes-header">
-					<Link className="link" to="/">Home</Link>
-					{isAdmin ? <Link className="link" to="/admin/gerencia">Admin</Link> : ''}
-					{this.state.user ? <Link to="/login" onClick={this.handleLogout}>Salir</Link>:
-					<Link className="link" to="/login">Entrar</Link>}
+				
+					<Link 
+						className="link" 
+						to="/">Home
+					</Link>
+
+					{isAdmin ? 
+						<Link 
+							className="link" 
+							to="/admin/gerencia">Admin
+						</Link> : 
+					''}
+
+					{this.state.user ?
+						<Link 
+							className="link" 
+							to="/login" 
+							onClick={this.handleLogout}>Salir
+						</Link>:
+
+					<Link 
+						className="link" 
+						to="/login">Entrar
+					</Link>}
 					<IconCart/>
 				</div>
 			</div>

@@ -24,7 +24,9 @@
 	text-align: center;
 	background: #212529;
 	border-radius: 5px;
-	padding-top: 1.2%
+	padding-top: 1.2%;
+	display: flex;
+	justify-content: center;
 }
 .btn-agregar:hover{
 	background: #343a40;
@@ -35,7 +37,6 @@
 	margin: 1px;
 	display: flex; 
 	justify-content: center;
-	align-items: baseline
 }
 
 
