@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Header from '../../components/Header'
 import NotFound from '../NotFound4O4'
 
+import { sesion } from '../../credencial/'
 import './styles.css'
 
 import bannerAdmin from './img/bannerAdmin.png'
@@ -13,7 +14,6 @@ class Admin extends Component{
 	state = {
 		user: false,
 		isAdmin: false,
-		sesion: '4rr55z'
 	}
 	
 	componentDidMount() {
@@ -27,7 +27,7 @@ class Admin extends Component{
     	if (verificadorUSer !== null){
     		this.setState({user: true})
 
-    		if (verificadorAdmin !== this.state.sesion){
+    		if (verificadorAdmin !== sesion){
     			this.setState({isAdmin: true})
     		}
     	}

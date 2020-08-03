@@ -11,6 +11,7 @@ export default function Carrito() {
 
 
 	return(
+		<>
 		<div className="container-carrito">
 		<Header/>
 		<PanelCarrito/>
@@ -24,5 +25,6 @@ export default function Carrito() {
 			</div>
 			)}
 		</div>
+		</>
 	)
 }

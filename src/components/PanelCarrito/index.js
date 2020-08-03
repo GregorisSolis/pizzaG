@@ -1,6 +1,8 @@
 import React,{ useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import './styles.css'
+
+import SubPanelCarrito from '../SubPanelCarrito'
 
 export default function PanelCarrito(){
 
@@ -17,15 +19,26 @@ export default function PanelCarrito(){
 		}
 	}
 
+	let [isVisible, setIsVisible] = useState(false)
+
 	return(
+		<>
+		{isVisible ? 
+			<div className="container-subPanel">
+				<div className="icon-cancel-circle" onClick={() => setIsVisible(false)}></div>
+				<SubPanelCarrito precio={compraTotal} compra={cart}/>
+			</div>
+			 : ''}
+
 		<div className="container-panel_carrito">
 			<div>
 				<h3>Precio total: R$ {compraTotal.toFixed(2)}</h3>
 			</div>
 
 			<div className="panel_carrito-btn">
-				<button>Enviar Pedido</button>
+				<button onClick={() => setIsVisible(true)}>Enviar Pedido</button>
 			</div>
 		</div>
+		</>
 	)
 }

@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import { logout } from '../../services/auth'
+import { sesion } from '../../credencial/'
 import './styles.css'
 //img
 import burgerImg from './pizza.png'
@@ -11,7 +12,6 @@ class Header extends Component{
 	state = {
 		user: false,
 		isAdmin: false,
-		sesion: '4rr55z'
 	}
 	
 	componentDidMount() {
@@ -25,7 +25,7 @@ class Header extends Component{
     	if (verificadorUSer !== null){
     		this.setState({user: true})
 
-    		if (verificadorAdmin !== this.state.sesion){
+    		if (verificadorAdmin !== sesion){
     			this.setState({isAdmin: true})
     		}
     	}

@@ -3,6 +3,7 @@ import NotFound from '../../NotFound4O4'
 import Header from '../../../components/Header'
 import ItemsProducto from '../../../components/ItemsProducto'
 import api from '../../../services/api'
+import { sesion } from '../../../credencial/'
 
 import './styles.css'
 
@@ -10,7 +11,6 @@ class Setting extends Component{
 	state = {
 		user: false,
 		isAdmin: false,
-		sesion: '4rr55z',
 		error:'',
 		success:'',
 		producto_id:'',
@@ -78,7 +78,7 @@ class Setting extends Component{
     	if (verificadorUSer !== null){
     		this.setState({user: true})
 
-    		if (verificadorAdmin !== this.state.sesion){
+    		if (verificadorAdmin !== sesion){
     			this.setState({isAdmin: true})
     		}
     	}

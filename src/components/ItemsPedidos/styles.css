@@ -1,0 +1,19 @@
+.container-items_pedido{
+	background: #fff;
+	width: 500px;
+	height: 300px;
+	padding: 2%;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px black;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 30px 50px 1fr
+}
+
+.itemA{
+	display: flex;
+	justify-content: space-around;
+}
+
+.article-itemB{padding: .5% 0px}

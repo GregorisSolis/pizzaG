@@ -35,6 +35,7 @@ handleSignIn = async e => {
             }
 
             this.props.history.push("/")
+            window.location.reload()
         }
         catch (err){
             this.setState({
