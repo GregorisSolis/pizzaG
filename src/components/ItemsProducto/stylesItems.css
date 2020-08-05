@@ -51,11 +51,11 @@
 	background: transparent;
 	padding: 4px;
 	border-radius: 4px;
-	margin: 0px 2px;
+	width: 45%;
 }
 
-.btn-eliminar{border: 1px solid red; color: red}
-.btn-editar{border: 1px solid #046E8F; color:#046E8F}
+.btn-eliminar{border: 1px solid red; color: red; margin-top: 1.5%}
+.btn-editar{border: 1px solid #046E8F; color:#046E8F; margin-top: 1.5%}
 
 .btn-eliminar:hover{background: red; color: #fff;}
 .btn-editar:hover{background: #046E8F; color:#fff;}

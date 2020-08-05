@@ -16,8 +16,6 @@ class Setting extends Component{
 		producto_id:'',
 		name: '',
 		precio: '',
-		codigo: 0,
-		cantidad:0,
 		description: '',
 		categoria: '',
 		productos: [],
@@ -45,14 +43,14 @@ class Setting extends Component{
 	handleRegisterProducto = async e => {
 		e.preventDefault()
 
-		const {name,precio,codigo,cantidad,description,categoria} = this.state
+		const {name,precio,description,categoria} = this.state
 
-		if(!name || !precio || !codigo || !cantidad || !description || !categoria){
+		if(!name || !precio || !description || !categoria){
 			this.setState({error: "debes llenar todos los campos!"})
 		}
 		else {
 			try{
-				await api.post('/productos', {name,precio,codigo,cantidad,description,categoria})
+				await api.post('/productos', {name,precio,description,categoria})
 				.then(resp =>{
 					this.loadProdcutos()
 					this.setState({success :'producto agregado exitosamente!'})
@@ -100,10 +98,10 @@ class Setting extends Component{
     editarProduct = e =>{
     	e.preventDefault()
 
-    	const {name,precio,codigo,cantidad,description,categoria,producto_id} = this.state
+    	const {name,precio,description,categoria,producto_id} = this.state
 
 				api.put(`/productos/${producto_id}`,
-							 {name,precio,codigo,cantidad,description,categoria})
+							 {name,precio,description,categoria})
 				.then(resp =>{
 					this.loadProdcutos()
 					this.setState({success :'producto se ha editado exitosamente!'})
@@ -122,17 +120,14 @@ class Setting extends Component{
     	this.setState({producto_id: producto._id})
     	this.setState({name: producto.name})
     	this.setState({precio: producto.precio})
-    	this.setState({codigo: producto.codigo})
     	this.setState({description: producto.description})
-    	this.setState({cantidad: producto.cantidad})
     	this.setState({categoria: producto.categoria})
     }
     limpiarInputs = () =>{
     	this.refs.nameProducto.value="";
     	this.refs.precio.value="";
     	this.refs.description.value="";
-    	this.refs.codigo.value="";
-    	this.refs.cantidad.value="";
+    	this.refs.value="";
     	this.refs.categoria.value="";
 
     	this.setState({edicion: false})
@@ -140,9 +135,7 @@ class Setting extends Component{
     	this.setState({producto_id: ''})
     	this.setState({name:''})
     	this.setState({precio:''})
-    	this.setState({codigo:''})
     	this.setState({description:''})
-    	this.setState({cantidad:''})
     	this.setState({categoria:''})
     }
 
@@ -181,24 +174,6 @@ class Setting extends Component{
 					ref="precio"
 					value={this.state.precio}
 					onChange={e => this.setState({ precio: e.target.value})}
-				/>
-				<input
-					className="input-codigo_producto" 
-					type="text"
-					name="codigo"
-					placeholder="codigo del producto"
-					ref="codigo"
-					value={this.state.codigo}
-					onChange={e => this.setState({ codigo: e.target.value})}
-				/>
-				<input
-					className="input-cantidad_producto" 
-					type="text"
-					name="cantidad"
-					placeholder="cantidad del producto"
-					ref="cantidad"
-					value={this.state.cantidad}
-					onChange={e => this.setState({ cantidad: e.target.value})}
 				/>
 				<input
 					className="input-categoria_producto" 
@@ -243,22 +218,6 @@ class Setting extends Component{
 					onChange={e => this.setState({ precio: e.target.value})}
 				/>
 				<input
-					className="input-codigo_producto" 
-					type="text"
-					name="codigo"
-					ref="codigo"
-					placeholder="codigo del producto"
-					onChange={e => this.setState({ codigo: e.target.value})}
-				/>
-				<input
-					className="input-cantidad_producto" 
-					type="text"
-					name="cantidad"
-					ref="cantidad"
-					placeholder="cantidad del producto"
-					onChange={e => this.setState({ cantidad: e.target.value})}
-				/>
-				<input
 					className="input-categoria_producto" 
 					type="text"
 					name="categoria"
@@ -300,8 +259,10 @@ class Setting extends Component{
                             precio={producto.precio} 
                             description={producto.description}
                             />
-                    <button className="btn-eliminar" onClick={() => this.deleteProduct(producto._id)}>eliminar</button>
-            		<button className="btn-editar" 	 onClick={() => this.activarEdicion(producto)}>editar</button>
+	                    <div className="btn-action">
+		                    <button className="btn-eliminar" onClick={() => this.deleteProduct(producto._id)}>eliminar</button>
+		            		<button className="btn-editar" 	 onClick={() => this.activarEdicion(producto)}>editar</button>
+	                    </div>
                     </article>
                     ))}
 			</div>

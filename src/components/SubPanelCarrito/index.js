@@ -2,6 +2,8 @@ import React,{useState} from "react"
 import api from '../../services/api'
 import './styles.css'
 
+import Swal from 'sweetalert2'
+
 export default function SubPanelCarrito(props){
 
 	let nameCliente = localStorage.getItem('@superloto-app/nameUser')
@@ -14,7 +16,8 @@ export default function SubPanelCarrito(props){
 			try{
 				api.post('/pedido/enviar-pedido', {pedido, description, direccion, formaDePago, precioTotal, namecliente})
 				.then(resp =>{
-					window.location.reload()
+					Swal.fire('Gracias por comprar!','TU PEDIDO LLEGARA PRONTO!','success')
+					setTimeout(function(){window.location.reload()}, 3800);
 				})
 				.catch(e => {
 					console.log(e)
@@ -23,7 +26,8 @@ export default function SubPanelCarrito(props){
 			catch(err) {
 				console.log(err)
 			}
-	}  
+	}
+
 	return(
 			<div className="container-sub_panelCarrito">
 				<h3>Informacion del Pedido</h3>

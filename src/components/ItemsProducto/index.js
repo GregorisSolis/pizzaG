@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../../store/cart'
-import './styles.css'
+import './stylesItems.css'
 import '../../styles.css'
 
 function ItemsProducto (props) {

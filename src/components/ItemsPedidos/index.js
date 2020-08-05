@@ -14,6 +14,7 @@ export default function ItemsPedidos(props){
 		pagoEn = true
 	}
 
+
 	return(
 		<div className="container-items_pedido" key={props._id}>
 			<div className="itemA">
@@ -32,6 +33,7 @@ export default function ItemsPedidos(props){
  							</article>
                             ))}
 			</div>
+			<button onClick={() => props.entregado(props._id)}>Pedido entregado</button>
 		</div>
 	)
 }

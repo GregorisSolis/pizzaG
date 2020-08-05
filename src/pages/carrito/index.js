@@ -9,7 +9,6 @@ export default function Carrito() {
 	
 	const cart = useSelector(state => state.cart)
 
-
 	return(
 		<>
 		<div className="container-carrito">

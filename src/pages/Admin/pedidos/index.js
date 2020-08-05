@@ -38,8 +38,10 @@ class Pedidos extends Component{
         .then(res => {
             this.setState({ solicitudes: res.data.pedido })
 
-           if(this.state.solicitudes.length !== []){
+           if(this.state.solicitudes.length !== 0){
              this.setState({hayPedidos: true})
+            }else{
+                this.setState({hayPedidos: false})  
             }
         })
         .catch(e => {
@@ -47,10 +49,20 @@ class Pedidos extends Component{
         })
     }
 
+    entregado = async (_id) =>{
+            await api.delete(`/pedido/${_id}`)
+        .then(res =>{
+            this.loadPedidos()
+        })
+        .catch(e =>{
+        })   
+    }
+
 
 	render(){
 		const {isAdmin, solicitudes,hayPedidos} = this.state
 
+        console.log(solicitudes)
 		return(
 		<>
 		{isAdmin ? 
@@ -69,6 +81,7 @@ class Pedidos extends Component{
                         direccion={infoPedido.direccion}
                         pedido={infoPedido}
                         formaDePago={infoPedido.formaDePago}
+                        entregado={() => this.entregado(infoPedido._id)}
                     />
                     </article>
                     ))}

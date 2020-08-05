@@ -52,6 +52,8 @@
 	align-items: center;
 }
 
+.btn-action{ display: flex; justify-content: space-between;}
+
 .input-description_producto{width: 75%}
 
 .btn-edit:hover{color:#046E8F; background: #fff}

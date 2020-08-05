@@ -16,6 +16,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "sweetalert2": "^9.17.1",
+    "sweetalert2-react-content": "^3.0.3",
     "yup": "^0.29.1"
   },
   "scripts": {
