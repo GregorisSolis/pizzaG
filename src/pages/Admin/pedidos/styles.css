@@ -12,3 +12,62 @@
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 340px 340px 340px 340px 340px 340px 340px 340px 340px 340px
 }
+
+.sub-container_isStatusVisible{
+	background: #fff;
+	width: 250px;
+	padding: 1%;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px black;
+	text-align: center;
+	margin: auto;
+	height: 311px;
+}
+
+.isStatusVisible{
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	z-index: 5;
+	margin: -11px 0px 0px -11px;
+	width: 38.7%;
+}
+
+.option-btn{
+	display: grid;
+	margin: 35% 0px;
+}
+
+.option-btn button{
+	margin: 1%;
+	height: 25px;
+	background: transparent;
+	color: #02c39a;
+	border-radius: 5px;
+	border: 1px solid #02c39a;
+	padding: 1%;
+}
+
+.option-btn button:hover{
+	background: #02c39a;
+	color: #fff;
+}
+
+.option-btn button:focus{
+	background: #02c39a;
+	color: #fff;
+	box-shadow: 1px 1px 1px black;
+}
+
+.btn_agregarStado, .btn-cancelarEstado{
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #495057;
+	padding: 2%;
+	width: 120px;
+	margin-left: 5px
+}
+
+.btn_agregarStado{	background: #001524; color: #fff;}
+.btn-cancelarEstado{	background: #d90429; color: #fff;}
+
+.btn_agregarStado:hover, .btn-cancelarEstado:hover{box-shadow: 3px 3px 3px #495057}

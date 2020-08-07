@@ -16,4 +16,26 @@
 	justify-content: space-around;
 }
 
+.action-ItemPedido{display: flex; justify-content: space-between; align-items: center;}
+
+.btn-cambiarEstado{
+	background: #48cae4;
+	border-radius: 5px;
+	padding: 1%;
+	color: #fff;
+	border: 1px solid #48cae4;
+	width: 150px	
+}
+
+.btn-itemsPedido{
+	background: red;
+	border-radius: 5px;
+	padding: 1%;
+	color: #fff;
+	border: 1px solid red;
+	width: 150px
+}
+
+.btn-itemsPedido:hover, .btn-cambiarEstado:hover{box-shadow: 2px 2px 2px black}
+
 .article-itemB{padding: .5% 0px}

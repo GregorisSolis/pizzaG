@@ -34,6 +34,7 @@ class Header extends Component{
 	handleLogout = () => {
 		localStorage.removeItem('@superloto-app/sesion')
 		localStorage.removeItem('@superloto-app/nameUser')
+		localStorage.removeItem('@superloto-app/emailUser')
 		logout()
 	}
 
@@ -73,6 +74,12 @@ class Header extends Component{
 						className="link" 
 						to="/login">Entrar
 					</Link>}
+
+					<Link 
+						className="link" 
+						to="/estado-pedido">Pedido
+					</Link>
+
 					<IconCart/>
 				</div>
 			</div>

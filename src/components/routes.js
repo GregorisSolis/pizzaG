@@ -8,6 +8,7 @@ import Home from '../pages/home'
 import Burge from '../pages/burge'
 import Pizza from '../pages/pizza'
 import Postres from '../pages/postres'
+import statusPedido from '../pages/statusPedido'
 import Admin from  '../pages/Admin'
 import Carrito from  '../pages/carrito'
 import Pedidos from  '../pages/Admin/pedidos'
@@ -39,6 +40,7 @@ const Routes = () => (
       <Route exact path="/pizzas" component={Pizza}/>
       <Route exact path="/postres" component={Postres}/>
       <PrivateRoute exact path="/carrito" component={Carrito}/>
+      <PrivateRoute exact path="/estado-pedido" component={statusPedido}/>
       <PrivateRoute exact path="/admin/gerencia" component={Admin}/>
       <PrivateRoute exact path="/admin/gerencia/pedidos" component={Pedidos}/>
       <PrivateRoute exact path="/admin/gerencia/setting" component={Setting}/>

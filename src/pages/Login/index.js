@@ -25,6 +25,7 @@ handleSignIn = async e => {
             const response = await api.post("/auth/authenticate", {email, password})
             login(response.data.token)    
             localStorage.setItem('@superloto-app/nameUser', response.data.user.name)
+            localStorage.setItem('@superloto-app/emailUser', response.data.user.email)
 
             this.setState({esAdmin: response.data.user.isAdmin})
 

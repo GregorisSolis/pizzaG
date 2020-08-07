@@ -7,34 +7,35 @@ import { sesion } from '../../../credencial/'
 import './styles.css'
 
 class Pedidos extends Component{
-	state = {
-		user: false,
-		isAdmin: false,
-		solicitudes: [],
-        hayPedidos: false
-	}
-	
-	componentDidMount() {
+    state = {
+        user: false,
+        isAdmin: false,
+        solicitudes: [],
+        hayPedidos: false,
+        newStatu: 0
+    }
+    
+    componentDidMount() {
       this.hayUser()
       this.loadPedidos()
     }
 
     hayUser = () =>{
-    	let verificadorUSer = localStorage.getItem('@superloto-app/nameUser')
-    	let verificadorAdmin = localStorage.getItem('@superloto-app/sesion')
+        let verificadorUSer = localStorage.getItem('@superloto-app/nameUser')
+        let verificadorAdmin = localStorage.getItem('@superloto-app/sesion')
 
-    	if (verificadorUSer !== null){
-    		this.setState({user: true})
+        if (verificadorUSer !== null){
+            this.setState({user: true})
 
-    		if (verificadorAdmin !== sesion){
-    			this.setState({isAdmin: true})
-    		}
-    	}
+            if (verificadorAdmin !== sesion){
+                this.setState({isAdmin: true})
+            }
+        }
     }
 
     loadPedidos = async () => {
 
-        api.get('/pedido/todos')
+        await api.get('/pedido/todos')
         .then(res => {
             this.setState({ solicitudes: res.data.pedido })
 
@@ -50,7 +51,7 @@ class Pedidos extends Component{
     }
 
     entregado = async (_id) =>{
-            await api.delete(`/pedido/${_id}`)
+        await api.delete(`/pedido/${_id}`)
         .then(res =>{
             this.loadPedidos()
         })
@@ -58,19 +59,28 @@ class Pedidos extends Component{
         })   
     }
 
+    enviarEstado = async (_id) =>{
+        let estado = this.state.newStatu
+        await api.put(`/pedido/${_id}`, {estado})
+        .then(res =>{
+            this.loadPedidos()
+        })
+        .catch(e =>{
+        })
+    }
 
-	render(){
-		const {isAdmin, solicitudes,hayPedidos} = this.state
 
-        console.log(solicitudes)
-		return(
-		<>
-		{isAdmin ? 
+    render(){
+        const {isAdmin, solicitudes,hayPedidos} = this.state
 
-		<>
-		<Header/>
+        return(
+        <>
+        {isAdmin ? 
+
+        <>
+        <Header/>
             <div className="container-pedidos">
-    		  {hayPedidos ? 
+              {hayPedidos ? 
                 <div className="container-list_pedidos">
                     {solicitudes.map(infoPedido =>(
                     <article key={infoPedido._id}>
@@ -82,6 +92,13 @@ class Pedidos extends Component{
                         pedido={infoPedido}
                         formaDePago={infoPedido.formaDePago}
                         entregado={() => this.entregado(infoPedido._id)}
+                        estadoEm={infoPedido.estado}
+
+                        enviarEstado={() => this.enviarEstado(infoPedido._id)}
+
+                        preparando={() => this.setState({newStatu : 1})}
+                        enCamino={() => this.setState({newStatu : 2})}
+                        entregaFine={() => this.setState({newStatu : 3})}
                     />
                     </article>
                     ))}
@@ -93,13 +110,13 @@ class Pedidos extends Component{
                 </div>
         }
             </div>
-		</>
+        </>
 
 
-		 : <NotFound/>}
-		</>
-		)
-	}
+         : <NotFound/>}
+        </>
+        )
+    }
 }
 
 export default Pedidos

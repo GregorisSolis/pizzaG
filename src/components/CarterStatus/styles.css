@@ -1,0 +1,47 @@
+.container-cartelStatus{
+	background: #fff;
+	width: 65%;
+	height: 50vh;
+	margin: 2%;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px black;
+	display: grid;
+	grid-template-rows: 45px 1fr 1fr
+}
+.linea-status{
+	width: 95%;
+	margin: auto;
+}
+
+.statu{
+	background: transparent;
+	color: #1d3557;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.barra-carga{
+	background: #cad2c5; 
+	width:90%; 
+	height: 8px; 
+	margin: auto;
+	display: flex;
+}
+.barra-carga_B{
+	background: #003049;
+	width:2%; 
+	height: 8px; 
+}
+
+.btn-actualizar{
+	background: #9d0208;
+	color: #fff; 
+	border:none;
+	padding: 1%;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.btn-actualizar:hover{box-shadow: 0px 0px 2px 3px rgba(0,0,0, 0.5)}
+
+.container-cartelStatus h2, .linea-status{color: black}

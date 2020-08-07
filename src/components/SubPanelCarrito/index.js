@@ -7,14 +7,15 @@ import Swal from 'sweetalert2'
 export default function SubPanelCarrito(props){
 
 	let nameCliente = localStorage.getItem('@superloto-app/nameUser')
+	let assignedTo = localStorage.getItem('@superloto-app/emailUser')
 
 	let [tipoPago, setTipoPago] = useState(0)
 	let [direccion, setDireccion] = useState('')
 	let [description, setDescrition] = useState('')
 
-	function handleRegisterPedido(formaDePago, precioTotal,direccion,description,pedido, namecliente){
+	function handleRegisterPedido(formaDePago, precioTotal,direccion,description,pedido, namecliente,assignedTo){
 			try{
-				api.post('/pedido/enviar-pedido', {pedido, description, direccion, formaDePago, precioTotal, namecliente})
+				api.post('/pedido/enviar-pedido', {pedido, description, direccion, formaDePago, precioTotal, namecliente, assignedTo})
 				.then(resp =>{
 					Swal.fire('Gracias por comprar!','TU PEDIDO LLEGARA PRONTO!','success')
 					setTimeout(function(){window.location.reload()}, 3800);
@@ -69,7 +70,7 @@ export default function SubPanelCarrito(props){
 						</div>
 				</div>
 				<div className="btn-sub_panelCarrito">
-					<button onClick={() => handleRegisterPedido(tipoPago, props.precio,direccion,description, props.compra, nameCliente)}>
+					<button onClick={() => handleRegisterPedido(tipoPago, props.precio,direccion,description, props.compra,nameCliente, assignedTo)}>
 						Confirmar Pedido
 					</button>
 				</div>
