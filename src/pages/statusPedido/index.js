@@ -30,7 +30,7 @@ class statusPedido extends Component{
 
 	pedidoUser = () =>{
 
-		const {pedidos, myPedido, hayPedido} = this.state
+		const {pedidos, myPedido} = this.state
 
 		let emailUser = localStorage.getItem('@superloto-app/emailUser')
 
@@ -47,7 +47,7 @@ class statusPedido extends Component{
 
 	render(){
 
-		const {hayPedido, myPedido, positionPedido} = this.state
+		const {hayPedido, positionPedido} = this.state
 
 
 		return(

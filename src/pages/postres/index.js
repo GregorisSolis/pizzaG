@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Header from '../../components/Header'
-import bannerPostre from './bannerPostres.png'
 import api from '../../services/api'
 import './styles.css'
 
@@ -50,8 +49,6 @@ export default class Postre extends Component {
         return(
             <div className="container-postre">
                 <Header/>
-                    <div className="container-banner_postre">
-                        <img src={bannerPostre} alt="banner"/>
                     <div className="container-listProducto">
                         <h1>Postres</h1>
                         <div className="info-producto">
@@ -66,7 +63,6 @@ export default class Postre extends Component {
                             ))}
                         </div>
                         <Bebidas/>
-                    </div>
                     </div>
             </div>
         )

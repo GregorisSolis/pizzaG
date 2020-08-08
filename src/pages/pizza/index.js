@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Header from '../../components/Header'
-import bannerPizza from './bannerPizza.png'
 import api from '../../services/api'
 import './styles.css'
 
@@ -47,8 +46,6 @@ class Pizza extends Component {
 		return(
 			<div className="container-pizza">
     			<Header/>
-        			<div className="container-banner_pizza">
-                        <img src={bannerPizza} alt="banner"/>
                     <div className="container-listProducto">
                         <h1>Pizza</h1>
                         <div className="info-producto">
@@ -64,7 +61,6 @@ class Pizza extends Component {
                             ))}
                         </div>
                         <Bebidas/>
-                    </div>
                     </div>
 			</div>
 		)

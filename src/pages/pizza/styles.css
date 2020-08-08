@@ -1,23 +1,16 @@
 .container-pizza{
 	max-width: 100%;
+	background: #1c2541;
 }
 
-.container-pizza .container-banner_pizza img{
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	z-index: 1;
-	margin: -50px 0px
-}
-
-.container-pizza .container-banner_pizza h1{
+.container-pizza h1{
 	position: relative;
 	z-index: 1;
 	color: #FFF;
 	margin: 0px;
 	padding: 1%;
 	text-align: center;
-	text-shadow: 2px 2px 2px black
+	text-shadow: 1px 1px 1px black
 }
 
 .info-producto{

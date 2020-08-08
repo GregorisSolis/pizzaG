@@ -48,13 +48,13 @@ class Register extends Component{
 		return(
 		<div className="container-register">
 			<form className="container-form" onSubmit={this.handleRegister}>
-				<h2>Register</h2>
+				<h2>Registrar</h2>
 				<div className="container-input_register">
 					<input
 						className="input-name_register" 
 						type="text"
 						name="name"
-						placeholder="nome do user"
+						placeholder="Primer nombre"
 						onChange={e => this.setState({ name: e.target.value})}
 					/>
 					<input
@@ -68,21 +68,21 @@ class Register extends Component{
 						className="input-password_register" 
 						type="password"
 						name="password"
-						placeholder="senha"
+						placeholder="Contraseña"
 						onChange={e => this.setState({ password: e.target.value})}
 					/>
 					<input
 						className="input-password2_register" 
 						type="password"
 						name="password2"
-						placeholder="confirme a senha"
+						placeholder="Confirmar contraseña"
 						onChange={e => this.setState({ password2: e.target.value})}
 					/>
 				</div>
 				<div className="container-btn">
-					<button className="btn-register" type="submit">register</button>
+					<button className="btn-register" type="submit">Registrar</button>
 				</div>
-				<Link to="/" className="link-login">já tem uma conta?</Link>
+				<Link to="/login" className="link-login">Ya tienes una cuenta?</Link>
 				{this.state.error && <p className="error-msg">{this.state.error}</p>}
 			</form>
 		</div>

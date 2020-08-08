@@ -12,6 +12,7 @@ export default function SubPanelCarrito(props){
 	let [tipoPago, setTipoPago] = useState(0)
 	let [direccion, setDireccion] = useState('')
 	let [description, setDescrition] = useState('')
+	let  aviso = ''
 
 	function handleRegisterPedido(formaDePago, precioTotal,direccion,description,pedido, namecliente,assignedTo){
 			try{
@@ -27,6 +28,10 @@ export default function SubPanelCarrito(props){
 			catch(err) {
 				console.log(err)
 			}
+	}
+
+	if(tipoPago === 2){
+	aviso = 'Por favor digite en la caja de descripción, con que billete cancelara la compra.'
 	}
 
 	return(
@@ -66,8 +71,8 @@ export default function SubPanelCarrito(props){
 								onClick={() => setTipoPago(2)}>
 								Dinero
 							</button>
-
 						</div>
+						<p>{aviso}</p>
 				</div>
 				<div className="btn-sub_panelCarrito">
 					<button onClick={() => handleRegisterPedido(tipoPago, props.precio,direccion,description, props.compra,nameCliente, assignedTo)}>

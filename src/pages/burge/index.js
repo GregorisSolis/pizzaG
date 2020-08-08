@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Header from '../../components/Header'
-import bannerBurger from './bannerBurger.png'
 import api from '../../services/api'
 import './styles.css'
 
@@ -47,8 +46,6 @@ class Burger extends Component {
 		return(
 			<div className="container-burger">
     			<Header/>
-        			<div className="container-banner_burger">
-                        <img src={bannerBurger} alt="banner"/>
                     <div className="container-listProducto">
                         <h1>Hamburguesas</h1>
                         <div className="info-producto">
@@ -63,7 +60,6 @@ class Burger extends Component {
                             ))}
                         </div>
                         <Bebidas/>
-                    </div>
                     </div>
 			</div>
 		)

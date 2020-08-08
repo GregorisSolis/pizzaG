@@ -22,6 +22,7 @@
 	position: relative;
 	z-index: 2;
 	color:#fff;
+	text-shadow: 1px 1px 1px black
 }
 
 .container-home .subtitulo-banner{
@@ -29,17 +30,9 @@
 	position: relative;
 	z-index: 2;
 	color:#fff;
+	text-shadow: 1px 1px 1px black
 }
 
-.container-titulos{
-	text-align: center;
-}
-
-.container-home .info-producto{
-	position: absolute;
-}
-
-.container-categorias a{text-decoration: none}
 
 .container-categorias{
 	max-width: 100%;
@@ -62,7 +55,7 @@
 	color: #fff;
 }
 
-.container-categorias p:hover{
-	background: #fff;
-	color: black
-}
+.container-categorias p:hover{background: #fff; color: black}
+.container-titulos{text-align: center;}
+.container-home .info-producto{position: absolute;}
+.container-categorias a{text-decoration: none}

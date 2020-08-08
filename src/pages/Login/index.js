@@ -60,15 +60,19 @@ render(){
             />
             <input 
                 type="password"
-                placeholder="password"
+                placeholder="contraseña"
                 onChange={e => this.setState({ password: e.target.value})}
                 className="input-pass"
             />
             </div>
-            <button className="btn-login" type="submit">entrar</button>
+
+            <div className="btn-login">
+            <button type="submit">entrar</button>
+            </div>
+
             <div className="container-anclas">
-                <Link to="/register">Criar conta grátis</Link>
-                <Link to="/register">Você esqueceu sua senha?</Link>
+                <Link to="/register">Crear una cuenta</Link>
+                <Link to="/register">Olvidaste tu contraseña?</Link>
             </div>
         </form>
     </div>
