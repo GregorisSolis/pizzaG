@@ -20,3 +20,9 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows:	185px
 }
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+	.info-producto{	grid-template-columns: 1fr}	
+}

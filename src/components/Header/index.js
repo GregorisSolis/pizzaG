@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import { logout } from '../../services/auth'
 import { sesion } from '../../credencial/'
+import HeaderMobil from './HeaderMobil'
 import './styles.css'
 //img
 import burgerImg from './pizza.png'
@@ -40,9 +41,10 @@ class Header extends Component{
 
 	render(){
 
-		const {isAdmin} = this.state
+		const {isAdmin, user} = this.state
 
 		return(
+			<>
 			<header className="container-header">
 			<div id="main-header">
 				<div className="logo-header">
@@ -84,6 +86,9 @@ class Header extends Component{
 				</div>
 			</div>
 			</header>
+
+			<HeaderMobil logout={() => this.handleLogout()} veriAdmin={isAdmin} veriUser={user}/>
+			</>
 		)
 	}
 }

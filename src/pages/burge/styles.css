@@ -24,3 +24,10 @@
 
 .container-listProducto{margin: 0px 4%}
 
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+	.container-listProducto{margin: auto;}
+	.container-burger .info-producto{grid-template-columns: 1fr}
+}

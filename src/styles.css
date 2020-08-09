@@ -16,11 +16,11 @@ button:focus {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?68sir6');
-  src:  url('fonts/icomoon.eot?68sir6#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?68sir6') format('truetype'),
-    url('fonts/icomoon.woff?68sir6') format('woff'),
-    url('fonts/icomoon.svg?68sir6#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?939x16');
+  src:  url('fonts/icomoon.eot?939x16#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?939x16') format('truetype'),
+    url('fonts/icomoon.woff?939x16') format('woff'),
+    url('fonts/icomoon.svg?939x16#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -43,14 +43,34 @@ button:focus {
 
 .icon-home:before {
   content: "\e902";
+  font-size: 35px
 }
 .icon-cart:before {
   content: "\e93a";
 }
-.icon-cancel-circle:before {
-  content: "\ea0d";
+.icon-cog:before {
+  content: "\e994";
+  font-size: 35px
+}
+.icon-spoon-knife:before {
+  content: "\e9a3";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-truck:before {
+  content: "\e9b0";
+  font-size: 35px
+}
+.icon-switch:before {
+  content: "\e9b6";
+  font-size: 35px
+}
+.icon-loop2:before {
+  content: "\ea2e";
 }
 
+.container-Headermobil .mobil-cart{font-size: 35px;color: #e0e1dd;}
 .icon-cancel-circle{color: red; font-size:1.5em;}
 .icon-cart{color: #FFF; font-size:1.5em;}
 
