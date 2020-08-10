@@ -59,3 +59,23 @@
 .container-titulos{text-align: center;}
 .container-home .info-producto{position: absolute;}
 .container-categorias a{text-decoration: none}
+.img_bannerB{display: none}
+
+
+/*RESPNSIVE*/
+
+@media only screen and (max-width: 700px){
+	.img_bannerA{display: none;}
+	.img_bannerB{display: flex;}
+	.container-titulos{margin-top: -65%}
+}
+
+@media only screen and (max-width: 600px){
+	.img_bannerA{display: none;}
+	.img_bannerB{display: flex;}
+	.container-titulos{margin-top: -65%}
+
+	.container-categorias{margin: -106% 0px 0px 0px; display: grid; height: 196px}
+	.container-categorias p{background: #e9ecef; color: #212529}
+
+}

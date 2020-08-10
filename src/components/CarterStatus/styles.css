@@ -45,3 +45,9 @@
 .btn-actualizar:hover{box-shadow: 0px 0px 2px 3px rgba(0,0,0, 0.5)}
 
 .container-cartelStatus h2, .linea-status{color: black}
+
+/*RESPNSIVE*/
+
+@media only screen and (max-width: 600px){
+	.container-cartelStatus{width: 95%; margin-top: 5%}
+}

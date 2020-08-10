@@ -71,3 +71,9 @@
 
 .funcionalidades-productos button{background: black; color: #fff;}
 h5{position: absolute; z-index:1}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+	.items-producto{width: 85%; height:20vh;}
+}

@@ -43,3 +43,14 @@
 	z-index: 1;
 	margin-top:-5%;
 }
+
+@media only screen and (max-width: 600px){
+
+	.bannerAdmin{width: 100%;height: 24vh;}
+	.container-admin h1{height: 20vh}
+	.container-admin .bannerAdmin img{height: 20vh}
+	.container-administracion{display: block; height: initial;}
+	.container-administracion img{border-radius: 5px; width: 95%; margin: 2px 2.5%; background: #597b96; height: 255px}
+	.icon-herramientas img{border-radius: 5px}
+	.container-listaProducto{display: block; margin: 55px 0%}
+}

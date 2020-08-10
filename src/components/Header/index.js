@@ -47,8 +47,8 @@ class Header extends Component{
 			<>
 			<header className="container-header">
 			<div id="main-header">
-				<div className="logo-header">
-					<h2>Pizza G</h2>
+				<div className="logo-header" >
+					<Link to="/"><h2>Pizza G</h2></Link>
 					<img src={burgerImg} alt="logo de pizza g"/>
 				</div>
 				<div className="routes-header">

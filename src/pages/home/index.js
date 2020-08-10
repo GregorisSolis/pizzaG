@@ -5,6 +5,7 @@ import './styles.css'
 
 //img
 import banner from './banner.png'
+import bannerMobil from './bannerMobil.jpg'
 
 class SignUp extends Component {
     state = {
@@ -38,23 +39,25 @@ class SignUp extends Component {
             <div className="container-home">
                 <Header/>
                 <div className="container-banner">
-                    <img src={banner} alt="banner"/>
+                    <img src={banner} alt="banner" className="img_bannerA"/>
+                    <img src={bannerMobil} alt="banner" className="img_bannerB"/>
                     <div className="container-titulos">
                         <h1 className="titulo-banner">
                         Hola {user ? name_user : 'Bienvenido'},
                         </h1>
-                        <h4 className="subtitulo-banner">¿Que te gustaria comer hoy?</h4>
+                        {user ? <h4 className="subtitulo-banner">¿Que te gustaria comer hoy?</h4> : 
+                                <h5 className="subtitulo-banner">Antes de iniciar tu compra debes <Link to="/login">iniciar sesion</Link></h5>}
                     </div>
                 </div>
 
                 <div className="container-categorias">
-                    <div className="container-postres">
+                    <div className="container-postres_btn">
                         <Link to="/postres"><p>Postre</p></Link>
                     </div>
-                    <div className="container-pizzas">
+                    <div className="container-pizzas_btn">
                         <Link to="/pizzas"><p>Pizza</p></Link>
                     </div>
-                    <div className="container-burger">
+                    <div className="container-burger_btn">
                         <Link to="/hamburguesas"><p>Hamburguesa</p></Link>
                     </div>
                 </div>

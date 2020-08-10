@@ -21,3 +21,11 @@
 	padding: 5%;
 	border-radius: 5px
 }
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+
+	.container-panel_carrito{width: 95%; height: 35px; margin-top: 2%}
+
+}

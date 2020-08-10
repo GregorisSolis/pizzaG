@@ -33,9 +33,16 @@
 	padding: 1%;
 	color: #fff;
 	border: 1px solid red;
-	width: 150px
+	width: 25%
 }
 
 .btn-itemsPedido:hover, .btn-cambiarEstado:hover{box-shadow: 2px 2px 2px black}
 
 .article-itemB{padding: .5% 0px}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width:  600px){
+	.container-items_pedido{margin: 0px; width: 100%}
+	.btn-cambiarEstado{width: 26%}
+}

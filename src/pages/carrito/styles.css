@@ -1,5 +1,6 @@
 .container-carrito{
 	background: linear-gradient(to right, #05668d , #02c39a);
+	height: 200vh
 }
 .container-carrito .items-cart {
 	width: 100%;
@@ -22,4 +23,11 @@
 
 .carrito-titulo{
 	padding-top: 5% 
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600%){
+
+
 }

@@ -44,10 +44,12 @@ class Admin extends Component{
 						<img src={bannerAdmin} alt="mesa con comida" />
 						<h1 className="titulo-banner_admin">Bienvenido, jefe!</h1>
 				</div>
+
 				<div className="container-administracion">
 					<div className="icon-pedidos">
 						<Link to="/admin/gerencia/pedidos"><img src={pedidoIcon} alt="icono de pedidos" /></Link>
 					</div>
+					
 					<div className="icon-herramientas">
 						<Link to="/admin/gerencia/setting"><img src={iconTuerca} alt=" icono tuerca"/></Link>
 					</div>

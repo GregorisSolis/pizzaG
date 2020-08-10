@@ -24,5 +24,6 @@
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 600px){
-	.info-producto{	grid-template-columns: 1fr}	
+	.info-producto{ display: block }
+	.container-pizza{margin-bottom: 59px}	
 }

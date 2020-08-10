@@ -18,7 +18,7 @@ export default function SubPanelCarrito(props){
 			try{
 				api.post('/pedido/enviar-pedido', {pedido, description, direccion, formaDePago, precioTotal, namecliente, assignedTo})
 				.then(resp =>{
-					Swal.fire('Gracias por comprar!','TU PEDIDO LLEGARA PRONTO!','success')
+					Swal.fire('Gracias por tu compra!','TU PEDIDO LLEGARA PRONTO!','success')
 					setTimeout(function(){window.location.reload()}, 3800);
 				})
 				.catch(e => {

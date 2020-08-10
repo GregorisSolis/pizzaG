@@ -71,3 +71,9 @@
 .btn-cancelarEstado{	background: #d90429; color: #fff;}
 
 .btn_agregarStado:hover, .btn-cancelarEstado:hover{box-shadow: 3px 3px 3px #495057}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+	.container-list_pedidos{display: block; margin: 10px 25px 5px 10px; width: 90%;}
+}

@@ -17,7 +17,6 @@
 	position: relative;
 	z-index: 1;
 	display: grid;
-	grid-template-columns: 310px 310px 310px 310px;
 	grid-template-rows: 185px;
 	margin: auto;
 }
@@ -29,5 +28,6 @@
 
 @media only screen and (max-width: 600px){
 	.container-listProducto{margin: auto;}
-	.container-burger .info-producto{grid-template-columns: 1fr}
+	.container-burger .info-producto{display: block}
+	.container-burger{margin-bottom: 59px}
 }
