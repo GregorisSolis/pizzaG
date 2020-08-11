@@ -18,7 +18,7 @@
 }
 
 .container-home .titulo-banner{
-	margin: 0px;
+	margin: 0px 12px;
 	position: relative;
 	z-index: 2;
 	color:#fff;
@@ -26,8 +26,6 @@
 }
 
 .container-home .subtitulo-banner{
-	margin: 2px;
-	position: relative;
 	z-index: 2;
 	color:#fff;
 	text-shadow: 1px 1px 1px black
@@ -73,7 +71,7 @@
 @media only screen and (max-width: 600px){
 	.img_bannerA{display: none;}
 	.img_bannerB{display: flex;}
-	.container-titulos{margin-top: -65%}
+	.container-titulos{margin-top: -82%}
 
 	.container-categorias{margin: -106% 0px 0px 0px; display: grid; height: 196px}
 	.container-categorias p{background: #e9ecef; color: #212529}
