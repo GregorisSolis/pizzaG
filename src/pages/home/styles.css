@@ -26,6 +26,7 @@
 }
 
 .container-home .subtitulo-banner{
+	position: relative;
 	z-index: 2;
 	color:#fff;
 	text-shadow: 1px 1px 1px black
@@ -54,7 +55,7 @@
 }
 
 .container-categorias p:hover{background: #fff; color: black}
-.container-titulos{text-align: center;}
+.container-titulos{text-align: center; margin-left: 3.5%}
 .container-home .info-producto{position: absolute;}
 .container-categorias a{text-decoration: none}
 .img_bannerB{display: none}
@@ -71,7 +72,7 @@
 @media only screen and (max-width: 600px){
 	.img_bannerA{display: none;}
 	.img_bannerB{display: flex;}
-	.container-titulos{margin-top: -82%}
+	.container-titulos{margin-top: -82%; margin-left: 1%}
 
 	.container-categorias{margin: -106% 0px 0px 0px; display: grid; height: 196px}
 	.container-categorias p{background: #e9ecef; color: #212529}

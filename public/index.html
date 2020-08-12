@@ -27,6 +27,29 @@
     <title>Pizza G</title>
   </head>
   <body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCj29x7W0CKLybCtsbi92tQVkO5LGpWhC8",
+        authDomain: "pizzag-1fe9b.firebaseapp.com",
+        databaseURL: "https://pizzag-1fe9b.firebaseio.com",
+        projectId: "pizzag-1fe9b",
+        storageBucket: "pizzag-1fe9b.appspot.com",
+        messagingSenderId: "895750111026",
+        appId: "1:895750111026:web:9cd99261bf1b2f07fee12b",
+        measurementId: "G-HZFMDQQ7KX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
