@@ -81,6 +81,8 @@
 
 .btn-sub_panelCarrito{text-align: center;}
 
+.container-subPanel p{color: red}
+
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 600px){
@@ -88,5 +90,5 @@
 }
 
 @media only screen and (max-width: 400px){
-	.container-sub_panelCarrito{margin: 1%;height: 420px}
+	.container-sub_panelCarrito{margin: 4%;height: 420px;width: 330px;}
 }
