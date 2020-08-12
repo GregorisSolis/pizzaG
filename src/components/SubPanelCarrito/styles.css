@@ -86,3 +86,7 @@
 @media only screen and (max-width: 600px){
 	.container-sub_panelCarrito{margin: 6%}
 }
+
+@media only screen and (max-width: 400px){
+	.container-sub_panelCarrito{margin: 1%;height: 420px}
+}

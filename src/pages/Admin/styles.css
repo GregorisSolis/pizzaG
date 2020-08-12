@@ -54,3 +54,8 @@
 	.icon-herramientas img{border-radius: 5px}
 	.container-listaProducto{display: block; margin: 55px 0%}
 }
+
+@media only screen and (max-width: 400px)
+{
+	.container-admin h1{font-size: 2.5em;}
+}

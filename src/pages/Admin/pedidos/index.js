@@ -106,7 +106,7 @@ class Pedidos extends Component{
 
         :
                 <div className="items-cart">
-                        <h1 className="carrito-titulo">Aun no hay pedidos.</h1>
+                        <h1 className="pedido-titulo">Aun no hay pedidos.</h1>
                 </div>
         }
             </div>
