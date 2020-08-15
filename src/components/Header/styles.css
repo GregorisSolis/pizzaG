@@ -50,7 +50,7 @@ a .icon-cart, .logo-header a{text-decoration: none;}
 
  .container-Headermobil{
  	width: 100%;
-	height: 71px;
+	height: 60px;
 	background: #e9ecef;
 	position: fixed;
 	z-index: 5;
@@ -58,7 +58,7 @@ a .icon-cart, .logo-header a{text-decoration: none;}
 	justify-content: space-around;
 	align-items: center;
 	box-shadow: 1px 1px 6px 3px #2b2d42;
-	margin-top: 77vh;
+	bottom: 0
  }
 
   .container-Headermobil a{
@@ -79,16 +79,3 @@ a .icon-cart, .logo-header a{text-decoration: none;}
 	.container-Headermobil{display: flex;}
 }
 
-
-
-@media only screen and (min-width: 376px){
-	.container-Headermobil{margin-top: 84vh;}
-}
-
-@media only screen and (min-width: 320px){
-	.container-Headermobil{margin-top: 43vh;}
-}
-
-@media only screen and (min-width: 280px){
-	.container-Headermobil{margin-top: 83vh;}
-}

@@ -9,7 +9,7 @@
 
   .container-input{
     display: flex;
-    width: 50%;
+    width: 100%;
   }
   .container-input .input-email{border-radius: 8px 0px 0px 0px}
   .container-input .input-pass{border-radius: 0px 8px 0px 0px; border-left: 1px solid #ccc;}
@@ -22,6 +22,7 @@
     color: #fff;
     font-size: 1em
     }
+      
  .input-email, .input-pass{
     height: 45px;
     width: 100%;
@@ -56,12 +57,8 @@
 
   /*ESTILOS RESPONSIVE*/
 
-  @media only screen and (max-width: 600px){
+  @media only screen and (min-width: 480px){
 
-    .container-input {width: 95%; margin: auto;}
-    .btn-login{width: 95%;}
-    .container-login .btn-login button{margin: auto 10.5px}
-    .container-login .error-msg{width: 90%; margin: 2% auto;}
   }
 
 

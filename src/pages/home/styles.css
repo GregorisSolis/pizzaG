@@ -95,7 +95,6 @@
 	.container-titulos{margin-top: -65%}
 	.container-categorias{margin: -80% 0px 0px 0px; display: grid;}
 	.carrito-titulo{margin: 1%;}
-	.input-email, .input-pass{width:47.4%}
 }
 
 @media only screen and (max-width: 300px){
