@@ -74,17 +74,31 @@
 	.img_bannerB{display: flex;}
 	.container-titulos{margin-top: -82%; margin-left: 1%}
 
-	.container-categorias{margin: -106% 0px 0px 0px; display: grid; height: 196px}
+	.container-categorias{margin: -76% 0px 0px 0px; display: grid; height: 196px}
 	.container-categorias p{background: #e9ecef; color: #212529}
-
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
+	.img_bannerA{display: none;}
+	.img_bannerB{display: flex;}
+	.container-titulos{margin-top: -76%; margin-left: 1%}
+
+	.container-categorias{margin: -83% 0px 0px 0px; display: grid; height: 196px}
+	.container-categorias p{background: #e9ecef; color: #212529}
+}
+
+
+
+@media only screen and (max-width: 480px){
 	.img_bannerA{display: none;}
 	.img_bannerB{display: flex;}
 	.container-titulos{margin-top: -65%}
 	.container-categorias{margin: -80% 0px 0px 0px; display: grid;}
-	.container-Headermobil{margin-top: 82vh;}
 	.carrito-titulo{margin: 1%;}
 	.input-email, .input-pass{width:47.4%}
+}
+
+@media only screen and (max-width: 300px){
+	.container-titulos{margin-top: -65%}
+	.container-categorias{margin: -80% 0px 0px 0px; display: grid;}
 }

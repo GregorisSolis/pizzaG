@@ -89,6 +89,10 @@
 	.container-sub_panelCarrito{margin: 6%}
 }
 
+@media only screen and (max-width: 500px){
+	.container-sub_panelCarrito{margin: 1% 9%;height: 500px;width: 330px;}
+}
+
 @media only screen and (max-width: 400px){
 	.container-sub_panelCarrito{margin: 4%;height: 420px;width: 330px;}
 }

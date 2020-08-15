@@ -50,15 +50,15 @@ a .icon-cart, .logo-header a{text-decoration: none;}
 
  .container-Headermobil{
  	width: 100%;
-	height: 60px;
+	height: 71px;
 	background: #e9ecef;
 	position: fixed;
 	z-index: 5;
-	margin-top: 87vh;
 	display: none;
 	justify-content: space-around;
 	align-items: center;
-	box-shadow: 1px 1px 6px 3px #2b2d42
+	box-shadow: 1px 1px 6px 3px #2b2d42;
+	margin-top: 77vh;
  }
 
   .container-Headermobil a{
@@ -73,8 +73,22 @@ a .icon-cart, .logo-header a{text-decoration: none;}
 /*RESPONSIVE*/
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 720px){
 	.routes-header{display: none}
 	#main-header{justify-content: center;}
 	.container-Headermobil{display: flex;}
+}
+
+
+
+@media only screen and (min-width: 376px){
+	.container-Headermobil{margin-top: 84vh;}
+}
+
+@media only screen and (min-width: 320px){
+	.container-Headermobil{margin-top: 43vh;}
+}
+
+@media only screen and (min-width: 280px){
+	.container-Headermobil{margin-top: 83vh;}
 }
